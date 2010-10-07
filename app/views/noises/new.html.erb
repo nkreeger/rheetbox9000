@@ -1,0 +1,8 @@
+<h2>ADD A NEW NOISE</h2>
+<% form_for(@noise) do |f| %>
+  <div class="field">
+    <%= f.label :file %>
+    <%= f.file_field "file" %>
+    <%= f.submit "ADD NOISE" %>
+  </div>
+<% end %>
