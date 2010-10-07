@@ -23,4 +23,10 @@ class NoisesController < ApplicationController
     redirect_to noises_path
   end
 
+  def play
+    noise = Noise.find(params[:id])
+    system("afplay #{noise.sound.path}") unless noise.nil?
+    render :text => ""
+  end
+
 end

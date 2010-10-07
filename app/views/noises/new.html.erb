@@ -1,13 +1,27 @@
-<h2>ADD A NEW NOISE</h2>
+<div class="item">
+  <h3>Add New Noise</h3>
+</div>
 <% form_for @noise, :html => { :multipart => true } do |f| %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="item">
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :file %>
+      <%= f.file_field :sound, :size => 16 %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.file_field :sound %>
-  </div>
-  <div class="field">
+  <div class="item right">
+    <input type="button" value="CANCEL" class="cancel" />
     <%= f.submit "ADD NOISE" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $(".cancel").click(function() {
+      window.location = "/";
+    });
+  });
+</script>

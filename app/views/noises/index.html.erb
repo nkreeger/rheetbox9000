@@ -1,7 +1,7 @@
 <% @noises.each do |noise| %>
   <div class="item">
     <div class="value">
-      <input type="button" value="<%= h(noise.name) %>" />
+      <input type="button" value="<%= h(noise.name) %>" class="playbutton" alt="<%= h(noise.id) %>" />
     </div>
     <div class="action">
       <%= link_to("Delete", noise_path(noise), :method => :delete) %>
@@ -9,6 +9,17 @@
   </div>
 <% end %>
 
+<br/>
 <div class="item right">
   <%= link_to("Add Noise", new_noise_path) %>
 </div>
+
+<script type="text/javascript">
+
+  $(function() {
+    $(".playbutton").click(function() {
+      $.get("/noises/" + $(this).attr("alt") + "/play");
+    });
+  });
+
+</script>
