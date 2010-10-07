@@ -12,6 +12,7 @@ GEM
       activesupport (= 2.3.8)
     activesupport (2.3.8)
     mysql (2.8.1)
+    paperclip (2.3.1.1)
     rack (1.1.0)
     rails (2.3.8)
       actionmailer (= 2.3.8)
@@ -28,4 +29,5 @@ PLATFORMS
 DEPENDENCIES
   bundler (= 1.0.2)
   mysql (= 2.8.1)
+  paperclip (= 2.3.1.1)
   rails (= 2.3.8)

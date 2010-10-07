@@ -1,0 +1,36 @@
+body, html {
+  background-color: #aba;
+}
+
+.content {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  text-align: left;
+  margin: 8px;
+  padding: 10px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #efefef;
+}
+
+.item .value {
+  display: inline-block;
+}
+
+.item .value input[type="button"] {
+}
+
+.item .action {
+  display: inline-block;
+  float: right;
+}
+
+.right {
+  text-align: right;
+}
+

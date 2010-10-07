@@ -12,8 +12,11 @@
 ActiveRecord::Schema.define(:version => 20101007182055) do
 
   create_table "noises", :force => true do |t|
-    t.string "name"
-    t.string "path"
+    t.string   "name"
+    t.string   "sound_file_name"
+    t.string   "sound_content_type"
+    t.integer  "sound_file_size"
+    t.datetime "sound_updated_at"
   end
 
 end

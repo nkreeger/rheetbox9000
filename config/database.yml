@@ -4,14 +4,15 @@ development:
   username: root
   password: password
 
-demo:
-  adapter: mysql
-  database: rheet_demo
-  username: root
-  password: password
-
 production:
   adapter: mysql
   database: rheet_production
   username: root
   password: password
+
+test:
+  adapter: mysql
+  database: rheet_test
+  username: root
+  password: password
+

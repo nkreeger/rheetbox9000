@@ -1,0 +1,14 @@
+<% @noises.each do |noise| %>
+  <div class="item">
+    <div class="value">
+      <input type="button" value="<%= h(noise.name) %>" />
+    </div>
+    <div class="action">
+      <%= link_to("Delete", noise_path(noise), :method => :delete) %>
+    </div>
+  </div>
+<% end %>
+
+<div class="item right">
+  <%= link_to("Add Noise", new_noise_path) %>
+</div>

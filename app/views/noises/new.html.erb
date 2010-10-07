@@ -1,8 +1,13 @@
 <h2>ADD A NEW NOISE</h2>
-<% form_for(@noise) do |f| %>
+<% form_for @noise, :html => { :multipart => true } do |f| %>
   <div class="field">
-    <%= f.label :file %>
-    <%= f.file_field "file" %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.file_field :sound %>
+  </div>
+  <div class="field">
     <%= f.submit "ADD NOISE" %>
   </div>
 <% end %>
