@@ -25,6 +25,7 @@ class NoisesController < ApplicationController
 
   def play
     noise = Noise.find(params[:id])
+    Rails.logger.info("afplay #{noise.sound.path}") unless noise.nil?
     system("afplay #{noise.sound.path}") unless noise.nil?
     render :text => ""
   end
